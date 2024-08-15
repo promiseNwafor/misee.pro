@@ -1,64 +1,49 @@
-import { useRef, useEffect } from 'react';
-import * as THREE from 'three';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { motion } from 'framer-motion';
-import BubbleBackground from './BubbleBackground';
+import { motion } from 'framer-motion'
 
-// function Particles() {
-//   const particlesRef = useRef<THREE.Points>(null!);
+const Bubbles = () => {
+  const generateBubble = (index: number) => ({
+    cx: Math.random() * 100 + '%',
+    cy: Math.random() * 100 + '%',
+    r: Math.random() * 10 + 5 + 'px',
+    key: index,
+  })
 
-//   useFrame(() => {
-//     if (particlesRef.current) {
-//       particlesRef.current.rotation.y += 0.001;
-//     }
-//   });
+  const bubbles = Array.from({ length: 30 }, (_, index) => generateBubble(index))
 
-//   const geometry = new THREE.BufferGeometry();
-//   const vertices = new Float32Array(15000); // 5000 points * 3 coordinates (x, y, z)
-//   for (let i = 0; i < vertices.length; i += 3) {
-//     vertices[i] = Math.random() * 2 - 1; // x
-//     vertices[i + 1] = Math.random() * 2 - 1; // y
-//     vertices[i + 2] = Math.random() * 2 - 1; // z
-//   }
-//   geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
-
-//   return (
-//     <points ref={particlesRef}>
-//       <bufferGeometry attach="geometry" />
-//       <pointsMaterial size={0.01} color="#ffffff" />
-//     </points>
-//   );
-// }
-
-// export default function BackgroundAnimation() {
-//   return (
-//     <div className="fixed inset-0 -z-10">
-//       <Canvas camera={{ position: [0, 0, 1] }}>
-//         <Particles />
-//       </Canvas>
-//     </div>
-//   );
-// }
-
-
-export default function BackgroundAnimation() {
-  const animationVariants = {
-    rotate: {
-      rotate: 360,
-      transition: { repeat: Infinity, duration: 10, ease: 'linear' }
-    }
-  };
-
-    return (
-        <>
-        <BubbleBackground />
-        {/* <motion.div
-        className="absolute inset-0 bg-background"
-        variants={animationVariants}
-        animate="rotate"
-        style={{ backgroundSize: '200% 200%' }}
-        /> */}
-      </>
-  );
+  return (
+    <svg
+      className="absolute h-screen w-screen inset-0 -z-10"
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg">
+      {bubbles.map(({ cx, cy, r, key }) => (
+        <motion.circle
+          key={key}
+          cx={cx}
+          cy={cy}
+          r={r}
+          fill="rgba(15, 23, 42, 0.6)"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [1, 0.5, 1],
+            y: ['0%', '10%', '0%'],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            repeatType: 'loop',
+            ease: 'easeInOut',
+            delay: Math.random() * 5,
+          }}
+        />
+      ))}
+    </svg>
+  )
 }
 
+export default function BackgroundAnimation() {
+  return (
+    <div className="relative w-full h-full">
+      <Bubbles />
+    </div>
+  )
+}
