@@ -48,9 +48,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="h-screen flex flex-col justify-center items-center p-4 relative">
+      <header className="h-[600px] md:h-screen flex flex-col justify-center items-center p-4 relative">
         <motion.div
-          className="text-center text-white z-10"
+          className="text-center z-10"
           initial="hidden"
           animate="visible"
           variants={textVariants}
@@ -65,7 +65,7 @@ const Header = () => {
         className={`${
           isSticky
             ? 'fixed top-0 left-0 w-full bg-background bg-opacity-50 shadow-md transition-transform transform translate-y-0 z-50'
-            : 'px-2 rounded-3xl absolute bg-background bg-opacity-60 bottom-8 left-1/2 transform -translate-x-1/2'
+            : 'px-2 md:rounded-3xl md:absolute bg-background bg-opacity-60 bottom-8 md:left-1/2 transform md:-translate-x-1/2'
         } ${scrollingUp ? 'translate-y-0' : 'translate-y-5'}`}>
         <ul className="flex justify-center space-x-6 p-4 text-lg">
           {navItems.map((item) => (

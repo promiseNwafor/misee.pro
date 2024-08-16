@@ -21,10 +21,10 @@ const Bubbles = () => {
           cx={cx}
           cy={cy}
           r={r}
-          fill="rgba(15, 23, 42, 0.6)"
+          fill="#162548"
           animate={{
             scale: [1, 1.5, 1],
-            opacity: [1, 0.5, 1],
+            opacity: [1, 0.5, 0.8],
             y: ['0%', '10%', '0%'],
           }}
           transition={{

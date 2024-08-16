@@ -31,9 +31,9 @@ export default function About() {
               viewport={{ once: true }}>
               I'm Promise Nwafor, but you can call me Misee. As a Frontend Engineer with over 4
               years of experience, I specialize in crafting high-performance, user-centric web
-              applications and full-stack applications using cutting-edge technologies like Next.js.
-              My journey in web development is driven by a passion for creating seamless digital
-              experiences that not only meet but exceed user expectations.
+              applications using cutting-edge technologies. My journey in web development is driven
+              by a passion for creating seamless digital experiences that not only meet but exceed
+              user expectations.
             </motion.p>
             <motion.p
               className="md:text-lg mb-2 md:mb-6 leading-relaxed"
@@ -44,8 +44,9 @@ export default function About() {
               My expertise lies in React, TypeScript, and Next.js, complemented by a strong
               foundation in modern frontend architectures. I also specialize in web accessibility,
               ensuring that the applications I build are inclusive and accessible to all users. I've
-              consistently delivered results across various industries, from fintech to social media
-              analytics, always focusing on optimizing performance and enhancing user satisfaction.
+              consistently delivered results across various industries, from FinTech and Media to
+              HealthTech and Gaming, always focusing on optimizing performance and enhancing user
+              satisfaction.
             </motion.p>
             <motion.p
               className="md:text-lg mb-2 md:mb-6 leading-relaxed"
@@ -55,8 +56,7 @@ export default function About() {
               viewport={{ once: true }}>
               My approach combines technical expertise with a keen eye for design, ensuring that the
               applications I build are not only functionally robust but also visually appealing and
-              intuitive. I'm particularly passionate about creating accessible, responsive designs
-              that provide an optimal user experience across all devices.
+              intuitive.
             </motion.p>
             <motion.p
               className="md:text-lg leading-relaxed"
@@ -67,7 +67,7 @@ export default function About() {
               Beyond coding, I'm a digital nomad and have been traveling for over a year, exploring
               new places while expanding my skill set, exploring new technologies, and contributing
               to open-source projects. I believe in the power of continuous learning and
-              collaboration to drive innovation in the ever-evolving landscape of frontend
+              collaboration to drive innovation in the ever-evolving landscape of software
               development.
             </motion.p>
           </div>

@@ -19,15 +19,23 @@ export default function ProjectCard({
   liveUrl,
 }: ProjectCardProps) {
   return (
-    <div className="border border-background rounded-lg shadow-md p-4">
-      <Image
-        src={imageUrl || '/placeholder.png'}
-        alt={title}
-        className="w-full h-72 object-cover"
-        width={500}
-        height={500}
-      />
-      <div className="p-6">
+    <div className="border border-background rounded-lg shadow-md md:p-4">
+      {imageUrl ? (
+        <video width="600" autoPlay controls>
+          <source src={imageUrl} type="video/mp4" />
+          Your browser does not support the video tag.
+          <p className="sr-only">Video of {title} demo</p>
+        </video>
+      ) : (
+        <Image
+          src="/placeholder.png"
+          alt={title}
+          className="w-full h-72 object-cover"
+          width={600}
+          height={600}
+        />
+      )}
+      <div className="p-3 md:p-6">
         <h3 className="text-accent/80 text-2xl font-semibold mb-2">{title}</h3>
         <p className="text-secondary mb-4">{description}</p>
         <div className="mb-4">
@@ -44,7 +52,7 @@ export default function ProjectCard({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary hover:text-primary transition-colors">
+            className="link transition-colors">
             <FaGithub className="inline mr-2" />
             Code
           </a>
@@ -52,7 +60,7 @@ export default function ProjectCard({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-secondary hover:text-primary transition-colors">
+            className="link transition-colors">
             <FaExternalLinkAlt className="inline mr-2" />
             Live Demo
           </a>
