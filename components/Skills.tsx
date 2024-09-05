@@ -4,7 +4,7 @@ import SkillBubble from './SkillBubble'
 
 const Skills = () => {
   return (
-    <div className="min-h-screen p-8 max-w-[600px] m-auto grid items-center">
+    <div className="min-h-screen p-8 max-w-[700px] m-auto grid items-center">
       <div>
         <motion.h2
           className="font-display text-4xl md:text-5xl font-bold mb-12 text-center"

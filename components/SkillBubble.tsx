@@ -9,7 +9,7 @@ interface SkillBubbleProps {
 }
 
 export default function SkillBubble({ skill, index }: SkillBubbleProps) {
-  const size = 50 + skill.level / 2
+  const size = 60 + skill.level / 2
 
   return (
     <motion.div
