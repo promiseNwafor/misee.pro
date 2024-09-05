@@ -45,6 +45,7 @@ export const skills = [
   { name: 'CI/CD', level: 70 },
   { name: 'Vite', level: 65 },
   { name: 'Cypress', level: 75 },
+  { name: 'CMS', level: 75 },
 ]
 
 export const navItems = [
