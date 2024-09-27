@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'SimpleBiz',
     description:
-      'Payment and Invoicing App. A comprehensive solution designed to streamline financial operations for small businesses. Built with Next.js, TypeScript, and Tailwind CSS, this app leverages modern web technologies to provide a seamless user experience. Key features include secure payment processing, product management, automated invoicing, and detailed financial reporting. The use of Server Actions and Next.js API Routes ensures efficient data handling, while integration with pdf-lib enables dynamic PDF generation for invoices and reports.',
+      'Business Management App. A comprehensive solution designed to streamline financial and sales operations for small businesses. Built with Next.js, TypeScript, and Tailwind CSS, this app leverages modern web technologies to provide a seamless user experience. Key features include secure payment processing, product management, automated invoicing, and detailed financial reporting. The use of Server Actions and Next.js API Routes ensures efficient data handling, while integration with pdf-lib enables dynamic PDF generation for invoices and reports.',
     technologies: ['Next.js', 'Tailwind CSS', 'PostgreSQL', 'React Query', 'Prisma', 'SSR'],
     imageUrl:
       'https://6pwxqfpcbd9gufxf.public.blob.vercel-storage.com/simplebiz-pwA0ag64ObtWFUHBSOdG56GsLWu61Y.mp4',
@@ -41,6 +41,7 @@ export const skills = [
   { name: 'GraphQL', level: 65 },
   { name: 'CSS/SASS', level: 95 },
   { name: 'Redux', level: 75 },
+  { name: 'Remix', level: 80 },
   { name: 'Docker', level: 50 },
   { name: 'CI/CD', level: 70 },
   { name: 'Vite', level: 65 },

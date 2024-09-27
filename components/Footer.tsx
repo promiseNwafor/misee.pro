@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaFileDownload, FaEnvelope } from 'react-icons/fa
 const githubUrl = 'https://github.com/promisenwafor'
 const linkedinUrl = 'https://www.linkedin.com/in/promise-nwafor-8765711a0/'
 const resumeUrl =
-  'https://6pwxqfpcbd9gufxf.public.blob.vercel-storage.com/Promise%20Nwafor%20Resume-mhf0l9ELOLdy8SmRFeKdedwVs2KE9u.pdf'
+  'https://6pwxqfpcbd9gufxf.public.blob.vercel-storage.com/Promise%20Nwafor%20Resume-4Peu4Fx9QRU5hO9JfDd0p2Kw2U7QVp.pdf'
 const email = 'misee.nwafor@gmail.com'
 
 export default function Footer() {
